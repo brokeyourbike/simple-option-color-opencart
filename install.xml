@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <name>simple_option_color_opencart</name>
+    <code>simple_option_color_opencart</code>
+    <description>Simple option color</description>
+    <version>1.0.0</version>
+    <author><![CDATA[Ivan Stasiuk<br/><a href="https://stasi.uk">Get Help</a>]]> </author>
+    <link>https://stasi.uk</link>
+
+    <file path="admin/language/en-gb/catalog/option.php">
+        <operation error="skip">
+            <search><![CDATA[$_['text_success']]]></search>
+            <add position="before"><![CDATA[
+                /* SIMPLE_OPTION_COLOR_OPENCART START */
+                $_['text_color']       = 'Color';
+                $_['entry_color']      = 'Color';
+                /* SIMPLE_OPTION_COLOR_OPENCART END */
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="admin/controller/catalog/option.php">
+        <operation error="skip">
+            <search><![CDATA[$_['text_success']]]></search>
+            <add position="before"><![CDATA[
+                /* SIMPLE_OPTION_COLOR_OPENCART START */
+                $_['text_color']       = 'Color';
+                $_['entry_color']      = 'Color';
+                /* SIMPLE_OPTION_COLOR_OPENCART END */
+            ]]></add>
+        </operation>
+    </file>
+
+</modification>
